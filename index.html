@@ -3,178 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Mate - Your Unofficial COMSATS Wah Companion</title>
+    <title>Campus Mate — COMSATS Wah Student Companion</title>
     <meta name="description" content="Campus Mate empowers students at COMSATS University Islamabad, Wah Campus with a unified platform for academics, updates, and campus life.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="app_icon.png">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">
-                <img src="app_icon.png" alt="Campus Mate Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/40/5B4CDB/FFFFFF?text=CM'">
-                <span class="logo-text">Campus<span class="highlight">Mate</span></span>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="app_icon.png" alt="Campus Mate" class="logo-img">
+                <span class="logo-name">Campus<b>Mate</b></span>
+            </a>
+            <div class="nav-center">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
             </div>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#about">About</a>
-                <a href="https://play.google.com/store/apps/details?id=com.campusmate.campus_mate" target="_blank" class="btn btn-primary btn-sm">Download App</a>
+            <div class="nav-right">
+                <a href="https://play.google.com/store/apps/details?id=com.campusmate.campus_mate" target="_blank" class="btn-download">
+                    <i class="fab fa-google-play"></i>
+                    <span>Download App</span>
+                </a>
             </div>
+            <button class="burger" id="burger">
+                <i class="fas fa-bars" id="burger-icon"></i>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#features" class="mnav-link">Features</a>
+            <a href="#about" class="mnav-link">About</a>
+            <a href="https://play.google.com/store/apps/details?id=com.campusmate.campus_mate" target="_blank" class="mnav-link mnav-cta">
+                <i class="fab fa-google-play"></i> Download App
+            </a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="badge fade-in-up">✨ Version 1.0.3 Available Now</div>
-                <h1 class="fade-in-up" style="animation-delay: 0.1s;">Your Unofficial <br><span class="gradient-text">COMSATS Wah</span> Companion</h1>
-                <p class="fade-in-up" style="animation-delay: 0.2s;">Empowering students with a unified platform for academics, campus updates, and everyday student life.</p>
-                <div class="hero-cta fade-in-up" id="download" style="animation-delay: 0.3s;">
-                    <a href="https://play.google.com/store/apps/details?id=com.campusmate.campus_mate" target="_blank" class="play-store-btn">
-                        <i class="fab fa-google-play"></i>
-                        <div class="play-store-text">
-                            <span class="small">GET IT ON</span>
-                            <span class="large">Google Play</span>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-wrap">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Version 1.0.3 &mdash; Live on Play Store
+                </div>
+                <h1>
+                    The campus app<br>
+                    built for <span class="accent-text">COMSATS</span><br>
+                    <span class="accent-text">Wah</span> students.
+                </h1>
+                <p class="hero-body">
+                    Timetables, GPA tracking, past papers, bus schedules, and more — everything you need for a smoother campus life.
+                </p>
+                <a href="https://play.google.com/store/apps/details?id=com.campusmate.campus_mate" target="_blank" class="gplay-btn">
+                    <div class="gp-icon"><i class="fab fa-google-play"></i></div>
+                    <div class="gp-label">
+                        <small>GET IT ON</small>
+                        <strong>Google Play</strong>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hero-right">
+                <div class="phone-mockup">
+                    <div class="phone-glow"></div>
+                    <div class="phone-body">
+                        <div class="phone-screen">
+                            <!-- App card in mockup -->
+                            <div class="mock-header">
+                                <img src="app_icon.png" alt="" class="mock-app-icon">
+                                <div class="mock-app-info">
+                                    <span class="mock-app-name">Campus Mate</span>
+                                    <span class="mock-app-sub">CUI Wah</span>
+                                </div>
+                            </div>
+                            <div class="mock-grid">
+                                <div class="mock-tile" style="--tc:#4F6EF7"><i class="fas fa-calendar-alt"></i><span>Timetable</span></div>
+                                <div class="mock-tile" style="--tc:#E0456A"><i class="fas fa-calculator"></i><span>GPA</span></div>
+                                <div class="mock-tile" style="--tc:#F59E0B"><i class="fas fa-book-open"></i><span>Papers</span></div>
+                                <div class="mock-tile" style="--tc:#10B981"><i class="fas fa-calendar-check"></i><span>Calendar</span></div>
+                                <div class="mock-tile" style="--tc:#8B5CF6"><i class="fas fa-users"></i><span>Faculty</span></div>
+                                <div class="mock-tile" style="--tc:#06B6D4"><i class="fas fa-bus"></i><span>Bus</span></div>
+                                <div class="mock-tile" style="--tc:#F43F5E"><i class="fas fa-bullhorn"></i><span>Updates</span></div>
+                                <div class="mock-tile" style="--tc:#0EA5E9"><i class="fas fa-graduation-cap"></i><span>Grants</span></div>
+                            </div>
                         </div>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper fade-in-up" style="animation-delay: 0.4s;">
-                <div class="app-icon-showcase">
-                    <img src="app_icon.png" alt="Campus Mate App Icon" class="floating-icon" onerror="this.src='https://via.placeholder.com/200/5B4CDB/FFFFFF?text=Campus+Mate'">
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
 
+        <div class="hero-stats-bar">
+            <div class="stat"><strong>9+</strong><span>Features</span></div>
+            <div class="stat-line"></div>
+            <div class="stat"><strong>Free</strong><span>Always</span></div>
+            <div class="stat-line"></div>
+            <div class="stat"><strong>Android</strong><span>Platform</span></div>
+            <div class="stat-line"></div>
+            <div class="stat"><strong>CUI Wah</strong><span>Campus</span></div>
+        </div>
+    </section>
+
+    <!-- Features -->
     <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Everything you need. <br>In <span class="gradient-text">one app</span>.</h2>
-                <p>Designed specifically for COMSATS students to make campus life easier and more organized.</p>
+        <div class="page-container">
+            <div class="section-intro reveal">
+                <p class="eyebrow">Features</p>
+                <h2>Everything in one app.</h2>
+                <p class="section-sub">Designed specifically for students at COMSATS University Islamabad, Wah Campus.</p>
             </div>
-            
-            <div class="features-grid">
-                <div class="feature-card" style="--card-color: #6366F1;">
-                    <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>Timetable</h3>
-                    <p>Manage your classes and never miss a lecture with our smart schedule.</p>
+
+            <div class="cards-grid">
+                <div class="fcard fcard-wide reveal" style="--cc:#4F6EF7">
+                    <div class="fcard-main">
+                        <div class="fcard-ico"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Smart Timetable</h3>
+                        <p>Visualize your full week of classes at a glance. No more checking multiple places.</p>
+                    </div>
+                    <div class="fcard-demo">
+                        <div class="demo-row"><span class="day-tag" style="background:#EEF1FF;color:#4F6EF7">MON</span><span class="class-name">Data Structures — CS-301</span></div>
+                        <div class="demo-row"><span class="day-tag" style="background:#FFF0F6;color:#E0456A">TUE</span><span class="class-name">Calculus III — MT-301</span></div>
+                        <div class="demo-row"><span class="day-tag" style="background:#F0FFF8;color:#10B981">WED</span><span class="class-name">Physics Lab — PH-201</span></div>
+                    </div>
                 </div>
-                
-                <div class="feature-card" style="--card-color: #EF4444;">
-                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
-                    <h3>Calendar</h3>
-                    <p>Stay updated on essential academic events and important university dates.</p>
-                </div>
-                
-                <div class="feature-card" style="--card-color: #EC4899;">
-                    <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+
+                <div class="fcard reveal" style="--cc:#E0456A">
+                    <div class="fcard-ico"><i class="fas fa-calculator"></i></div>
                     <h3>GPA Calculator</h3>
-                    <p>Track your academic progress and estimate your GPA with ease.</p>
+                    <p>Track your academic standing and estimate your semester GPA in seconds.</p>
                 </div>
-                
-                <div class="feature-card" style="--card-color: #F59E0B;">
-                    <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+
+                <div class="fcard reveal" style="--cc:#F59E0B">
+                    <div class="fcard-ico"><i class="fas fa-book-open"></i></div>
                     <h3>Past Papers</h3>
-                    <p>Access a repository of study resources to ace your upcoming exams.</p>
+                    <p>A repository of previous exam papers to help you prepare and study smarter.</p>
                 </div>
 
-                <div class="feature-card" style="--card-color: #8B5CF6;">
-                    <div class="feature-icon"><i class="fas fa-users"></i></div>
-                    <h3>Faculty Directory</h3>
-                    <p>Easily find and contact your teachers and university staff members.</p>
+                <div class="fcard reveal" style="--cc:#10B981">
+                    <div class="fcard-ico"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Academic Calendar</h3>
+                    <p>Stay on top of every key university date — from exams to semester breaks.</p>
                 </div>
-                
-                <div class="feature-card" style="--card-color: #F43F5E;">
-                    <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+
+                <div class="fcard fcard-wide fcard-right reveal" style="--cc:#8B5CF6">
+                    <div class="fcard-main">
+                        <div class="fcard-ico"><i class="fas fa-users"></i></div>
+                        <h3>Faculty Directory</h3>
+                        <p>Search and contact any faculty member instantly. No more hunting for emails or office hours.</p>
+                    </div>
+                    <div class="fcard-demo fcard-demo-col">
+                        <div class="dir-entry"><div class="dir-av" style="background:#EEF1FF;color:#4F6EF7"><i class="fas fa-user"></i></div><div><b>Dr. Ahmed Ali</b><span>Computer Science</span></div></div>
+                        <div class="dir-entry"><div class="dir-av" style="background:#F5F0FF;color:#8B5CF6"><i class="fas fa-user"></i></div><div><b>Dr. Sara Khan</b><span>Mathematics</span></div></div>
+                    </div>
+                </div>
+
+                <div class="fcard reveal" style="--cc:#F43F5E">
+                    <div class="fcard-ico"><i class="fas fa-bullhorn"></i></div>
                     <h3>Campus Updates</h3>
-                    <p>Get instant notifications about the latest news and announcements.</p>
+                    <p>Real-time announcements and university news delivered straight to you.</p>
                 </div>
 
-                <div class="feature-card" style="--card-color: #10B981;">
-                    <div class="feature-icon"><i class="fas fa-search"></i></div>
-                    <h3>Lost & Found</h3>
-                    <p>Report lost items or help return found items to fellow students.</p>
-                </div>
-                
-                <div class="feature-card" style="--card-color: #06B6D4;">
-                    <div class="feature-icon"><i class="fas fa-bus"></i></div>
+                <div class="fcard reveal" style="--cc:#06B6D4">
+                    <div class="fcard-ico"><i class="fas fa-bus"></i></div>
                     <h3>Bus Tracking</h3>
-                    <p>Check transport routes and timings to commute without the hassle.</p>
+                    <p>Check transport routes and timings — never miss your ride home again.</p>
                 </div>
 
-                <div class="feature-card" style="--card-color: #0EA5E9;">
-                    <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="fcard reveal" style="--cc:#16A34A">
+                    <div class="fcard-ico"><i class="fas fa-search"></i></div>
+                    <h3>Lost &amp; Found</h3>
+                    <p>Report missing items or help fellow students recover their belongings.</p>
+                </div>
+
+                <div class="fcard reveal" style="--cc:#0EA5E9">
+                    <div class="fcard-ico"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Scholarships</h3>
-                    <p>Discover financial aid opportunities and application deadlines easily.</p>
+                    <p>Discover financial aid opportunities and track application deadlines with ease.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="about">
-        <div class="container">
-            <div class="about-card">
-                <div class="about-content">
-                    <div class="about-icon"><i class="fas fa-code"></i></div>
-                    <h2>Built by a Student, for Students</h2>
-                    <p>Campus Mate is an independent initiative developed to streamline daily academic and campus life for students at COMSATS University Islamabad, Wah Campus. It is not officially affiliated with the administration.</p>
-                    <a href="https://cuiwah.edu.pk/" target="_blank" class="btn btn-outline">Visit Official University Website <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i></a>
+        <div class="page-container">
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p class="eyebrow">About the App</p>
+                    <h2>Made by a student,<br>for every student.</h2>
+                    <p>Campus Mate is a fully independent project — not affiliated with COMSATS University. It was built from scratch to solve the real, everyday frustrations of campus life at CUI Wah Campus.</p>
+                    <p>It's completely free and always will be.</p>
+                    <div class="about-actions">
+                        <a href="https://play.google.com/store/apps/details?id=com.campusmate.campus_mate" target="_blank" class="gplay-btn">
+                            <div class="gp-icon"><i class="fab fa-google-play"></i></div>
+                            <div class="gp-label">
+                                <small>GET IT ON</small>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="https://cuiwah.edu.pk/" target="_blank" class="link-ghost">
+                            Official University Site <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-cards reveal">
+                    <div class="acard">
+                        <div class="acard-icon" style="background:#EEF1FF;color:#4F6EF7"><i class="fas fa-code"></i></div>
+                        <div class="acard-body">
+                            <strong>Indie Project</strong>
+                            <p>Made solo with care — not by a company or the university.</p>
+                        </div>
+                    </div>
+                    <div class="acard">
+                        <div class="acard-icon" style="background:#F0FFF4;color:#16A34A"><i class="fas fa-lock-open"></i></div>
+                        <div class="acard-body">
+                            <strong>Free Forever</strong>
+                            <p>No subscriptions or paywalls. Always free for CUI students.</p>
+                        </div>
+                    </div>
+                    <div class="acard">
+                        <div class="acard-icon" style="background:#FFFBEB;color:#D97706"><i class="fas fa-university"></i></div>
+                        <div class="acard-body">
+                            <strong>Unofficial</strong>
+                            <p>Not affiliated with COMSATS. A grassroots student initiative.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <div class="logo">
-                    <img src="app_icon.png" alt="Campus Mate Logo" class="logo-img-small" onerror="this.src='https://via.placeholder.com/32/5B4CDB/FFFFFF?text=CM'">
-                    <span>Campus Mate</span>
+    <!-- CTA -->
+    <section class="cta-strip">
+        <div class="page-container">
+            <div class="cta-inner reveal">
+                <div class="cta-text">
+                    <h2>Download Campus Mate today.</h2>
+                    <p>Free on Google Play — no sign-up required.</p>
                 </div>
-                <p>The ultimate companion app empowering COMSATS students.</p>
-            </div>
-            
-            <div class="footer-links">
-                <a href="#features">Features</a>
-                <a href="#about">About</a>
-                <a href="/app-ads.txt">AdMob Verification</a>
-                <a href="https://play.google.com/store/apps/details?id=com.campusmate.campus_mate" target="_blank">Download</a>
+                <a href="https://play.google.com/store/apps/details?id=com.campusmate.campus_mate" target="_blank" class="gplay-btn gplay-outline">
+                    <div class="gp-icon"><i class="fab fa-google-play"></i></div>
+                    <div class="gp-label">
+                        <small>GET IT ON</small>
+                        <strong>Google Play</strong>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Campus Mate. Built with passion for the campus community.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="page-container">
+            <div class="footer-row">
+                <a href="#" class="logo">
+                    <img src="app_icon.png" alt="Campus Mate" class="logo-img">
+                    <span class="logo-name">Campus<b>Mate</b></span>
+                </a>
+                <nav class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="/app-ads.txt">AdMob Verification</a>
+                    <a href="https://cuiwah.edu.pk/" target="_blank">University</a>
+                </nav>
+            </div>
+            <div class="footer-line"></div>
+            <p class="footer-copy">&copy; 2026 Campus Mate &mdash; Built for students at COMSATS Wah Campus.</p>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
+        // Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('stuck', window.scrollY > 40);
+        });
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
+        // Burger
+        const burger = document.getElementById('burger');
+        const burgerIcon = document.getElementById('burger-icon');
+        const mobileNav = document.getElementById('mobileNav');
+        burger.addEventListener('click', () => {
+            const open = mobileNav.classList.toggle('open');
+            burgerIcon.className = open ? 'fas fa-times' : 'fas fa-bars';
+        });
+        document.querySelectorAll('.mnav-link').forEach(l => {
+            l.addEventListener('click', () => {
+                mobileNav.classList.remove('open');
+                burgerIcon.className = 'fas fa-bars';
+            });
+        });
 
-            document.querySelectorAll('.feature-card').forEach((card, index) => {
-                card.style.transitionDelay = `${index * 0.05}s`;
-                observer.observe(card);
+        // Scroll reveal
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    io.unobserve(e.target);
+                }
             });
-            
-            document.querySelectorAll('.section-header, .about-card').forEach(el => {
-                observer.observe(el);
-            });
+        }, { threshold: 0.08 });
+
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            el.style.transitionDelay = `${(i % 5) * 0.06}s`;
+            io.observe(el);
         });
     </script>
 </body>
