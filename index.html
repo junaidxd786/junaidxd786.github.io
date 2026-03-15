@@ -3,190 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Mate - Your Unofficial COMSATS Wah Companion</title>
+    <title>Campus Mate — Your COMSATS Wah Companion</title>
     <meta name="description" content="Campus Mate empowers students at COMSATS University Islamabad, Wah Campus with a unified platform for academics, updates, and campus life.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="app_icon.png">
 </head>
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">
-                <img src="app_icon.png" alt="Campus Mate Logo" class="logo-img">
-                <span class="logo-text">Campus <span class="highlight">Mate</span></span>
-            </div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <img src="app_icon.png" alt="Campus Mate" class="logo-img">
+                <span>Campus<strong>Mate</strong></span>
+            </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#about">About</a>
-                <a href="#download" class="btn btn-primary btn-sm">Download App</a>
+                <a href="https://play.google.com/store/apps/details?id=com.junaidxd.campusmate" target="_blank" class="nav-cta">
+                    <i class="fab fa-google-play"></i> Download App
+                </a>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-bg">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-        </div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="badge">Version 1.0.3 Available Now</div>
-                <h1>Your Unofficial <br><span class="gradient-text">COMSATS Wah</span> Companion</h1>
-                <p>Empowering students with a unified platform for academics, campus updates, and everyday student life.</p>
-                <div class="hero-cta" id="download">
-                    <a href="https://play.google.com/store/apps/details?id=com.junaidxd.campusmate" target="_blank" class="play-store-btn">
-                        <i class="fab fa-google-play"></i>
-                        <div class="play-store-text">
-                            <span class="small">GET IT ON</span>
-                            <span class="large">Google Play</span>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" class="mob-link">Features</a>
+        <a href="#about" class="mob-link">About</a>
+        <a href="https://play.google.com/store/apps/details?id=com.junaidxd.campusmate" target="_blank" class="mob-link mob-cta">
+            <i class="fab fa-google-play"></i> Download App
+        </a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-grid"></div>
+
+        <div class="container hero-inner">
+            <div class="hero-left">
+                <div class="version-chip">
+                    <span class="chip-dot"></span>
+                    Version 1.0.3 — Live on Play Store
+                </div>
+                <h1 class="hero-heading">
+                    The App<br>
+                    Every <em>COMSATS</em><br>
+                    Student Needs
+                </h1>
+                <p class="hero-sub">
+                    One unified companion for academics, campus life, and everything in between — built for students at CUI Wah.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.junaidxd.campusmate" target="_blank" class="gplay-btn">
+                        <div class="gplay-icon">
+                            <i class="fab fa-google-play"></i>
+                        </div>
+                        <div class="gplay-text">
+                            <span>GET IT ON</span>
+                            <strong>Google Play</strong>
                         </div>
                     </a>
+                    <div class="hero-stat-row">
+                        <div class="hero-stat">
+                            <strong>9+</strong>
+                            <span>Features</span>
+                        </div>
+                        <div class="stat-sep"></div>
+                        <div class="hero-stat">
+                            <strong>Free</strong>
+                            <span>Always</span>
+                        </div>
+                        <div class="stat-sep"></div>
+                        <div class="hero-stat">
+                            <strong>CUI</strong>
+                            <span>Wah Campus</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image-wrapper">
-                <div class="app-icon-showcase">
-                    <img src="app_icon.png" alt="Campus Mate App Icon" class="floating-icon">
+
+            <div class="hero-right">
+                <div class="icon-orb">
+                    <div class="orb-ring orb-ring-1"></div>
+                    <div class="orb-ring orb-ring-2"></div>
+                    <div class="orb-ring orb-ring-3"></div>
+                    <img src="app_icon.png" alt="Campus Mate App" class="hero-app-icon">
+                    <!-- Floating bubbles -->
+                    <div class="bubble bubble-1"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="bubble bubble-2"><i class="fas fa-calculator"></i></div>
+                    <div class="bubble bubble-3"><i class="fas fa-bus"></i></div>
+                    <div class="bubble bubble-4"><i class="fas fa-book-open"></i></div>
+                    <div class="bubble bubble-5"><i class="fas fa-bullhorn"></i></div>
                 </div>
             </div>
         </div>
-    </header>
 
-    <!-- Features Section -->
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Features -->
     <section id="features" class="features">
         <div class="container">
-            <div class="section-header">
-                <h2>Everything you need. <br>In <span class="gradient-text">one app</span>.</h2>
-                <p>Designed specifically for COMSATS students to make campus life easier.</p>
+            <div class="features-header">
+                <p class="section-label">What's Inside</p>
+                <h2>Built for<br><span class="text-accent">campus life.</span></h2>
+                <p class="section-desc">Everything a COMSATS Wah student needs, thoughtfully packed into one app.</p>
             </div>
-            
+
             <div class="features-grid">
-                <!-- Academic Tools -->
-                <div class="feature-card" style="--card-color: #6366F1;">
-                    <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>Timetable</h3>
-                    <p>Manage your classes and never miss a lecture with our smart schedule.</p>
+                <div class="feat-card feat-large" data-color="#6366F1" data-delay="0">
+                    <div class="feat-icon-wrap"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="feat-body">
+                        <h3>Timetable</h3>
+                        <p>Manage your classes and never miss a lecture with a smart, visual schedule at your fingertips.</p>
+                    </div>
+                    <div class="feat-deco"></div>
                 </div>
-                
-                <div class="feature-card" style="--card-color: #EF4444;">
-                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
-                    <h3>Calendar</h3>
-                    <p>Stay updated on essential academic events and important university dates.</p>
-                </div>
-                
-                <div class="feature-card" style="--card-color: #EC4899;">
-                    <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+
+                <div class="feat-card" data-color="#EC4899" data-delay="1">
+                    <div class="feat-icon-wrap"><i class="fas fa-calculator"></i></div>
                     <h3>GPA Calculator</h3>
-                    <p>Track your academic progress and estimate your GPA with ease.</p>
+                    <p>Track academic progress and estimate your GPA instantly.</p>
+                    <div class="feat-deco"></div>
                 </div>
-                
-                <div class="feature-card" style="--card-color: #F59E0B;">
-                    <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+
+                <div class="feat-card" data-color="#F59E0B" data-delay="2">
+                    <div class="feat-icon-wrap"><i class="fas fa-book-open"></i></div>
                     <h3>Past Papers</h3>
-                    <p>Access a repository of study resources to ace your upcoming exams.</p>
+                    <p>Exam-ready resources and study materials, all in one place.</p>
+                    <div class="feat-deco"></div>
                 </div>
 
-                <!-- Campus Life -->
-                <div class="feature-card" style="--card-color: #8B5CF6;">
-                    <div class="feature-icon"><i class="fas fa-users"></i></div>
-                    <h3>Faculty Directory</h3>
-                    <p>Easily find and contact your teachers and university staff members.</p>
+                <div class="feat-card" data-color="#EF4444" data-delay="3">
+                    <div class="feat-icon-wrap"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Academic Calendar</h3>
+                    <p>Stay ahead of every important university date and deadline.</p>
+                    <div class="feat-deco"></div>
                 </div>
-                
-                <div class="feature-card" style="--card-color: #F43F5E;">
-                    <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+
+                <div class="feat-card feat-large feat-large-right" data-color="#8B5CF6" data-delay="4">
+                    <div class="feat-icon-wrap"><i class="fas fa-users"></i></div>
+                    <div class="feat-body">
+                        <h3>Faculty Directory</h3>
+                        <p>Find and contact your teachers and university staff in seconds — no more hunting for emails.</p>
+                    </div>
+                    <div class="feat-deco"></div>
+                </div>
+
+                <div class="feat-card" data-color="#F43F5E" data-delay="5">
+                    <div class="feat-icon-wrap"><i class="fas fa-bullhorn"></i></div>
                     <h3>Campus Updates</h3>
-                    <p>Get instant notifications about the latest news and announcements.</p>
+                    <p>Instant notifications for news and announcements.</p>
+                    <div class="feat-deco"></div>
                 </div>
 
-                <div class="feature-card" style="--card-color: #10B981;">
-                    <div class="feature-icon"><i class="fas fa-search"></i></div>
+                <div class="feat-card" data-color="#10B981" data-delay="6">
+                    <div class="feat-icon-wrap"><i class="fas fa-search"></i></div>
                     <h3>Lost & Found</h3>
-                    <p>Report lost items or help return found items to fellow students.</p>
-                </div>
-                
-                <div class="feature-card" style="--card-color: #06B6D4;">
-                    <div class="feature-icon"><i class="fas fa-bus"></i></div>
-                    <h3>Bus Tracking</h3>
-                    <p>Check transport routes and timings to commute without the hassle.</p>
+                    <p>Report or recover lost items with the campus community.</p>
+                    <div class="feat-deco"></div>
                 </div>
 
-                <div class="feature-card" style="--card-color: #0EA5E9;">
-                    <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="feat-card" data-color="#06B6D4" data-delay="7">
+                    <div class="feat-icon-wrap"><i class="fas fa-bus"></i></div>
+                    <h3>Bus Tracking</h3>
+                    <p>Check routes and timings to commute without the stress.</p>
+                    <div class="feat-deco"></div>
+                </div>
+
+                <div class="feat-card" data-color="#0EA5E9" data-delay="8">
+                    <div class="feat-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Scholarships</h3>
-                    <p>Discover financial aid opportunities and application deadlines easily.</p>
+                    <p>Discover financial aid and track application deadlines.</p>
+                    <div class="feat-deco"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-card">
-                <div class="about-content">
-                    <div class="about-icon"><i class="fas fa-university"></i></div>
-                    <h2>Unofficial App Made by a Student</h2>
-                    <p>Campus Mate is an independent initiative developed to streamline the daily academic and campus life for students at COMSATS University Islamabad, Wah Campus.</p>
-                    <a href="https://cuiwah.edu.pk/" target="_blank" class="btn btn-outline">Visit Official University Website <i class="fas fa-external-link-alt"></i></a>
+            <div class="about-inner">
+                <div class="about-badge">Student-Made</div>
+                <h2>Made by a student,<br>for every student.</h2>
+                <p>Campus Mate is an independent initiative — not affiliated with the university — built from scratch to streamline academic and campus life for students at COMSATS University Islamabad, Wah Campus.</p>
+                <div class="about-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.junaidxd.campusmate" target="_blank" class="gplay-btn gplay-dark">
+                        <div class="gplay-icon"><i class="fab fa-google-play"></i></div>
+                        <div class="gplay-text">
+                            <span>GET IT ON</span>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                    <a href="https://cuiwah.edu.pk/" target="_blank" class="about-link">
+                        Official University Site <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+            <div class="about-visual">
+                <div class="about-card-stack">
+                    <div class="stack-card sc-1">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Unofficial App</span>
+                    </div>
+                    <div class="stack-card sc-2">
+                        <i class="fas fa-heart"></i>
+                        <span>Built with Love</span>
+                    </div>
+                    <div class="stack-card sc-3">
+                        <i class="fas fa-lock-open"></i>
+                        <span>Free Forever</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container cta-inner">
+            <div class="cta-text">
+                <h2>Ready to simplify your campus life?</h2>
+                <p>Join students already using Campus Mate at CUI Wah.</p>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.junaidxd.campusmate" target="_blank" class="gplay-btn">
+                <div class="gplay-icon"><i class="fab fa-google-play"></i></div>
+                <div class="gplay-text">
+                    <span>GET IT ON</span>
+                    <strong>Google Play</strong>
+                </div>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
+        <div class="container footer-inner">
             <div class="footer-brand">
-                <div class="logo">
-                    <img src="app_icon.png" alt="Campus Mate Logo" class="logo-img-small">
-                    <span>Campus Mate</span>
-                </div>
-                <p>The ultimate companion app for COMSATS students.</p>
+                <a href="#" class="logo logo-footer">
+                    <img src="app_icon.png" alt="Campus Mate" class="logo-img">
+                    <span>Campus<strong>Mate</strong></span>
+                </a>
+                <p>The unofficial companion app<br>for COMSATS students at Wah Campus.</p>
             </div>
-            
             <div class="footer-links">
                 <a href="#features">Features</a>
+                <a href="#about">About</a>
                 <a href="/app-ads.txt">AdMob Verification</a>
+                <a href="https://cuiwah.edu.pk/" target="_blank">University Website</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Campus Mate. Built for Students.</p>
+            <div class="container">
+                <span>&copy; 2026 Campus Mate. Built for students, by a student.</span>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Simple script for intersection observer to trigger animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            // Observe feature cards
-            document.querySelectorAll('.feature-card').forEach((card, index) => {
-                card.style.transitionDelay = `${index * 0.1}s`;
-                observer.observe(card);
-            });
-            
-            // Observe other sections
-            document.querySelectorAll('.section-header, .about-card').forEach(el => {
-                observer.observe(el);
-            });
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.mob-link').forEach(l => {
+        l.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
         });
+    });
+
+    // Intersection Observer for reveal animations
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('in-view');
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.feat-card, .features-header, .about-inner, .about-visual, .cta-inner').forEach(el => io.observe(el));
+
+    // Staggered card delays + color application
+    document.querySelectorAll('.feat-card').forEach(card => {
+        const delay = card.getAttribute('data-delay') || 0;
+        card.style.transitionDelay = `${delay * 0.08}s`;
+
+        const color = card.getAttribute('data-color');
+        if (color) {
+            const iconWrap = card.querySelector('.feat-icon-wrap');
+            const deco = card.querySelector('.feat-deco');
+            if (iconWrap) {
+                iconWrap.style.background = color + '18';
+                iconWrap.style.color = color;
+            }
+            if (deco) {
+                deco.style.background = color;
+            }
+            card.style.setProperty('--card-color', color);
+        }
+    });
     </script>
 </body>
 </html>
